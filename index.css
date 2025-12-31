@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Dancing+Script:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Romantic Color Palette */
+    --background: 350 30% 97%;
+    --foreground: 350 30% 15%;
+
+    --card: 350 40% 98%;
+    --card-foreground: 350 30% 15%;
+
+    --popover: 350 40% 98%;
+    --popover-foreground: 350 30% 15%;
+
+    /* Rose Gold Primary */
+    --primary: 350 60% 55%;
+    --primary-foreground: 350 20% 98%;
+
+    /* Soft Blush Secondary */
+    --secondary: 350 40% 92%;
+    --secondary-foreground: 350 50% 35%;
+
+    /* Cream Muted */
+    --muted: 40 30% 94%;
+    --muted-foreground: 350 20% 45%;
+
+    /* Burgundy Accent */
+    --accent: 350 70% 40%;
+    --accent-foreground: 350 20% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 350 30% 88%;
+    --input: 350 30% 88%;
+    --ring: 350 60% 55%;
+
+    --radius: 1rem;
+
+    /* Custom Romantic Colors */
+    --rose-gold: 350 60% 65%;
+    --rose-gold-light: 350 50% 85%;
+    --blush: 350 45% 88%;
+    --cream: 40 40% 95%;
+    --burgundy: 350 70% 30%;
+    --champagne: 40 50% 90%;
+    --pink-soft: 350 70% 92%;
+    --love-red: 350 80% 50%;
+  }
+
+  .dark {
+    --background: 350 30% 8%;
+    --foreground: 350 20% 95%;
+
+    --card: 350 30% 12%;
+    --card-foreground: 350 20% 95%;
+
+    --popover: 350 30% 12%;
+    --popover-foreground: 350 20% 95%;
+
+    --primary: 350 60% 60%;
+    --primary-foreground: 350 30% 10%;
+
+    --secondary: 350 40% 20%;
+    --secondary-foreground: 350 20% 90%;
+
+    --muted: 350 30% 18%;
+    --muted-foreground: 350 20% 65%;
+
+    --accent: 350 60% 45%;
+    --accent-foreground: 350 20% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 350 30% 20%;
+    --input: 350 30% 20%;
+    --ring: 350 60% 55%;
+
+    --rose-gold: 350 55% 55%;
+    --rose-gold-light: 350 40% 35%;
+    --blush: 350 35% 25%;
+    --cream: 40 30% 20%;
+    --burgundy: 350 60% 45%;
+    --champagne: 40 40% 25%;
+    --pink-soft: 350 50% 25%;
+    --love-red: 350 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-serif;
+  }
+}
+
+@layer utilities {
+  .font-romantic {
+    font-family: 'Dancing Script', cursive;
+  }
+  
+  .font-elegant {
+    font-family: 'Cormorant Garamond', serif;
+  }
+  
+  .font-serif {
+    font-family: 'Lora', serif;
+  }
+
+  .text-shadow-romantic {
+    text-shadow: 0 2px 10px hsl(var(--rose-gold) / 0.3);
+  }
+
+  .romantic-gradient {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--rose-gold-light)) 0%,
+      hsl(var(--cream)) 50%,
+      hsl(var(--blush)) 100%
+    );
+  }
+
+  .romantic-gradient-text {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--primary)) 0%,
+      hsl(var(--accent)) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glass-romantic {
+    background: hsl(var(--card) / 0.8);
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(var(--border) / 0.5);
+  }
+
+  .glow-romantic {
+    box-shadow: 
+      0 0 20px hsl(var(--rose-gold) / 0.3),
+      0 0 40px hsl(var(--rose-gold) / 0.2),
+      0 0 60px hsl(var(--rose-gold) / 0.1);
+  }
+}
